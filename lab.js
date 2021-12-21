@@ -85,7 +85,7 @@ favoriteThings.show = 'The Office';
 favoriteThings['food'] = 'Chicken Nuggets';
 favoriteThings['book'] = 'Enders Game';
 
-console.log(favoriteThings);
+//onsole.log(favoriteThings);
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -104,6 +104,8 @@ var carDetails = {
 */
 
 //Code Here
+let{color, make, model, year} = carDetails;
+//console.log(color, make, model, year, );
 
 
 
