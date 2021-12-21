@@ -119,7 +119,7 @@ let{color, make, model, year} = carDetails;
 
 function greeting( obj ) {
   //Code Here
-  
+  let{title, firstName, lastName} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
