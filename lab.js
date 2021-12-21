@@ -215,7 +215,9 @@ user.email = 'bryan.smith@devmounta.in';
 */
 
 //Code Here
+delete user.username;
 
+console.log(user);
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
