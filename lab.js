@@ -168,6 +168,20 @@ console.log(grandTotal);
 
 //Code Here
 
+let foods = {
+  carb: 500,
+  fat: 200,
+  protein: 20
+}
+
+function ingredients(object){
+  let{carb, fat, protein} = object;
+  let array = [carb, fat, protein];
+  return array;
+}
+
+let printedArray = ingredients(foods);
+console.log(printedArray);
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
