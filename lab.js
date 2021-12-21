@@ -291,6 +291,30 @@ merlin.castSpell();
 */
 
 //Code Here
+class Phone {
+  constructor(brand, model, storage, color, price, sold){
+    this.brand = brand,
+    this.model = model,
+    this.storage = storage,
+    this.color = color,
+    this.price = price,
+    sold = false
+  }
+  sell(){
+    let sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`);
+  }
+  changePrice(newPrice){
+    this.price = newPrice;
+    console.log(`${this.brand} ${this.model} price has been lowered to ${this.price}.`);
+  }
+
+}
+
+let iphone = new Phone('Apple', 'iPhone 12', 256, 'Blue', '$799');
+let google = new Phone('Google', 'Pixel 6', 512, 'White', '$599');
+iphone.sell();
+google.changePrice('$499');
 
   
 /*
