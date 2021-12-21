@@ -217,7 +217,7 @@ user.email = 'bryan.smith@devmounta.in';
 //Code Here
 delete user.username;
 
-console.log(user);
+//console.log(user);
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -227,6 +227,20 @@ console.log(user);
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color){
+    this.name = name,
+    this.age = age,
+    this.color = color
+  }
+  petName(){
+    console.log(`My name is ${this.name}.`);
+  }
+}
+
+let george = new Cat('George', 2, 'White');
+
+george.petName();
 
 
 
