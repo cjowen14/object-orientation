@@ -253,6 +253,19 @@ george.petName();
 */
 
 //Code here
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name,
+    this.age = age,
+    this.favoriteSpell = favoriteSpell
+  }
+  castSpell(){
+    console.log(`${this.name} has cast ${this.favoriteSpell}.`);
+  }
+}
+
+let merlin = new Wizard('Merlin', '158', 'Thundaga');
+merlin.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
