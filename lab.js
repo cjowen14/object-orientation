@@ -137,7 +137,22 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
+let population = {
+  utah: 100,
+  california: 200,
+  texas: 300,
+  arizona: 150
+}
+
 //Code Here
+function totalPopulation (object) {
+  let{utah, california, texas, arizona} = object;
+  let totalNumber = utah + california + texas + arizona;
+  return totalNumber;
+}
+
+let grandTotal = totalPopulation(population);
+console.log(grandTotal);
 
 
 
