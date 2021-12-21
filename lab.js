@@ -24,7 +24,7 @@ let me = {
 //Code here
 let dog = {
   name: 'Rufus',
-  color: 'grey',
+  color: 'Grey',
   age: 4,
   goodBoy: true
 }
@@ -56,6 +56,15 @@ console.log(dog['color']);
 */
 
 //Code here
+let favoriteThings = {
+  band: 'Twenty-One Pilots',
+  food: 'Steak',
+  book: 'Deathly Hallows',
+  movie: 'Star Wars saga',
+  holiday: 'Christmas'
+}
+
+//console.log(favoriteThings);
 
 
 /*
@@ -63,6 +72,8 @@ console.log(dog['color']);
 */
 
 //Code here
+favoriteThings.car = 'N/A';
+favoriteThings.show = 'The Office';
 
 
 /*
@@ -71,6 +82,10 @@ console.log(dog['color']);
 */
 
 //Code here
+favoriteThings['food'] = 'Chicken Nuggets';
+favoriteThings['book'] = 'Enders Game';
+
+console.log(favoriteThings);
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
