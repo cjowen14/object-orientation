@@ -298,10 +298,10 @@ class Phone {
     this.storage = storage,
     this.color = color,
     this.price = price,
-    sold = false
+    this.sold = false
   }
   sell(){
-    let sold = true;
+    this.sold = true;
     console.log(`${this.brand} ${this.model} has been sold.`);
   }
   changePrice(newPrice){
@@ -311,10 +311,10 @@ class Phone {
 
 }
 
-let iphone = new Phone('Apple', 'iPhone 12', 256, 'Blue', '$799');
-let google = new Phone('Google', 'Pixel 6', 512, 'White', '$599');
-iphone.sell();
-google.changePrice('$499');
+let iphone12 = new Phone('Apple', 'iPhone 12', 256, 'Blue', 799);
+let google5 = new Phone('Google', 'Pixel 5', 512, 'White', 599);
+iphone12.sell();
+google5.changePrice(499);
 
   
 /*
@@ -328,6 +328,10 @@ google.changePrice('$499');
 */
 
 //Code Here
+let iphone13 = new Phone('Apple', 'iPhone 13', 128, 'Black', 999);
+let samsung21 = new Phone('Samsung', 'Galaxy S21', 256, 'Grey', 749);
+let google6 = new Phone('Google', 'Pixel 6', 512, 'White', 799);
+
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -337,6 +341,7 @@ google.changePrice('$499');
 */ 
 
 //Code Here 
+samsung21.changePrice(699);
 
 
 /*
@@ -346,6 +351,8 @@ google.changePrice('$499');
 */
 
 //Code Here 
+google6.sell();
+console.log(google6['sold']);
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
