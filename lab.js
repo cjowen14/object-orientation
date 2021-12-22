@@ -372,6 +372,9 @@ const colors = {
 //do not edit this object
 
 //Code Here 
+let colorsClone = {...colors};
+let colorsCopy = [colorsClone];
+console.log(colorsCopy);
 
 
 
@@ -400,7 +403,21 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
+let contactClone =  {...contactInfo, ...shippingInfo};
+let helensArray = [contactClone];
 
+function info(arr){
+for (let i = 0; i < arr.length; i++){
+  for (let j = (i + 1 ); j < arr.length; j++){
+    if(arr[j] === arr[i]){
+      let extraInfo = arr.splice(j, 1);
+  }
+}
+} return arr;
+}
+
+let helensInfo = info(helensArray);
+console.log(helensInfo);
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
@@ -419,12 +436,30 @@ const shippingInfo = {
 
 //Code Here 
 
+class Vehicle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity,
+    this.color = color,
+    this.mileage = mileage
+  }
+
+  move(miles){
+    this.mileage += miles;
+    console.log(this.mileage);
+  }
+
+}
+
+
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
 //Code Here
+let myFirstVehicle = new Vehicle(4, 'Blue', 10000);
+//myFirstVehicle.move(500);
+
 
 
 /* 
@@ -437,11 +472,21 @@ const shippingInfo = {
 
 //Code Here
 
+class Motorcycle extends Vehicle{
+  constructor(capacity, color, mileage, make, isCool){
+    super(capacity, color, mileage);
+    this.make = make,
+    this.isCool = isCool
+  }
+}
+
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
+let myFirstMotorcycle = new Motorcycle(1, 'Black', 5000, 'Honda', true);
+myFirstMotorcycle.move(1000);
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
@@ -464,7 +509,27 @@ const shippingInfo = {
 */
 
 //Code Here
+class Boat extends Vehicle{
+  constructor(capacity, color, mileage, name, type, isSeaworthy){
+    super(capacity, color, mileage);
+    this.name = name,
+    this.type = type,
+    this.isSeaworthy = isSeaworthy
+  }
 
+  checkSeaworthiness(){
+    if(this.isSeaworthy === true){
+      console.log(`The ${this.color} ${this.type} ${this.name} is seaworthy!`);
+    } else {
+      console.log(`You need to get your ${this.type} into shape!`);
+    }
+  }
+
+  performMaintenance(){
+    this.isSeaworthy = true;
+  }
+
+}
 
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
@@ -473,20 +538,25 @@ const shippingInfo = {
 
 //Code Here
 
+let myFirstBoat = new Boat(8, 'White', 500, 'Buster', 'Yacht', false);
+
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code Here
+myFirstBoat.checkSeaworthiness();
 
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here 
+myFirstBoat.performMaintenance()
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+myFirstBoat.checkSeaworthiness();
